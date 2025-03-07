@@ -1,0 +1,48 @@
+﻿@model IEnumerable<DiscussionForum.Controllers.DiscussionViewModel>
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="container mt-4">
+    <div class="row mb-4">
+        <div class="col">
+            <h1>Discussion Threads</h1>
+        </div>
+        <div class="col text-end">
+            <a asp-controller="Discussions" asp-action="Create" class="btn btn-primary">Create New Discussion</a>
+        </div>
+    </div>
+
+    <div class="row">
+        @foreach (var discussion in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    @if (!string.IsNullOrEmpty(discussion.ImageFileName))
+                    {
+                        <img src="~/images/@discussion.ImageFileName"
+                             class="card-img-top"
+                             alt="Discussion Image"
+                             style="height: 200px; object-fit: cover;" />
+                    }
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a asp-controller="Home"
+                               asp-action="GetDiscussion"
+                               asp-route-id="@discussion.DiscussionId"
+                               class="text-decoration-none">@discussion.Title</a>
+                        </h5>
+                        <p class="card-text">
+                            <small class="text-muted">
+                                Posted by @discussion.Author on @discussion.CreateDate.ToString("MMM dd, yyyy HH:mm")
+                            </small>
+                        </p>
+                        <p class="card-text">
+                            <span class="badge bg-secondary">@discussion.CommentCount Comments</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

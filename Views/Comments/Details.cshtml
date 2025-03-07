@@ -1,0 +1,66 @@
+@model DiscussionForum.Models.Discussion
+
+@{
+    ViewData["Title"] = "Discussion Details";
+}
+
+<h1>@Model.Title</h1>
+<p>@Model.Content</p>
+
+<h3>Comments</h3>
+
+<!-- Container for displaying the discussion comments -->
+<div id="comments-container">
+    @foreach (var comment in Model.Comments)
+    {
+        <div class="comment">
+            <p><strong>@comment.Author</strong> says:</p>
+            <p>@comment.Content</p>
+            <p><em>Posted on: @comment.CreateDate.ToString("g")</em></p>
+        </div>
+    }
+</div>
+
+<h3>Add a Comment</h3>
+<!-- Form for submitting a new comment -->
+<form asp-action="Create" asp-controller="Comments" method="post">
+    <textarea name="Content" class="form-control" rows="4" required></textarea>
+    <input type="hidden" name="DiscussionId" value="@Model.DiscussionId" />
+    <button type="submit" class="btn btn-primary">Post Comment</button>
+</form>
+
+<a href="@Url.Action("Index", "Discussions")">Back to Discussion List</a>
+
+@section Scripts {
+    <script>
+        const discussionId = @Model.DiscussionId;
+
+        // fetches comments via an API call and dynamically updates the comment section.
+        fetch(`/Comments/GetComments?discussionId=${discussionId}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.length === 0) {
+                    console.log("No comments found.");
+                } else {
+                    console.log("Comments:", data);
+
+                    // clears existing comments in case the comments were reloaded dynamically
+                    const commentsContainer = document.getElementById('comments-container');
+                    commentsContainer.innerHTML = '';
+
+                    // loops through the comments data and creates HTML elements for each comment
+                    data.forEach(comment => {
+                        const commentDiv = document.createElement('div');
+                        commentDiv.classList.add('comment');
+                        commentDiv.innerHTML = `
+                            <p><strong>Anonymous</strong> says:</p>
+                            <p>${comment.Content}</p>
+                            <p><em>Posted on: ${new Date(comment.CreateDate).toLocaleString()}</em></p>
+                        `;
+                        commentsContainer.appendChild(commentDiv);
+                    });
+                }
+            })
+            .catch(error => console.error('Error fetching comments:', error));
+    </script>
+}

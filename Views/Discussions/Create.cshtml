@@ -1,0 +1,40 @@
+﻿@model DiscussionForum.Models.Discussion
+<div class="container mt-4">
+    <h1>Create New Discussion</h1>
+    <form asp-action="Create" enctype="multipart/form-data" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="mb-3">
+            <label asp-for="Title" class="form-label">Title*</label>
+            <input asp-for="Title" class="form-control" required />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Content" class="form-label">Content*</label>
+            <textarea asp-for="Content" class="form-control" rows="5" required></textarea>
+            <span asp-validation-for="Content" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Category" class="form-label">Category (optional)</label>
+            <input asp-for="Category" class="form-control" />
+            <span asp-validation-for="Category" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Author" class="form-label">Your Name (optional)</label>
+            <input asp-for="Author" class="form-control" placeholder="Leave empty to post as Anonymous" />
+            <span asp-validation-for="Author" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="imageFile" class="form-label">Image (optional)</label>
+            <input type="file" id="imageFile" name="imageFile" class="form-control" accept="image/*" />
+        </div>
+        <div class="mb-3">
+            <input type="submit" value="Create Discussion" class="btn btn-primary" />
+            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+        </div>
+    </form>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

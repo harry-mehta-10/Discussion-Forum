@@ -1,0 +1,56 @@
+@model IEnumerable<DiscussionForum.Models.Discussion>
+<div class="container mt-4">
+    <div class="row mb-4">
+        <div class="col">
+            <h1>Discussions</h1>
+        </div>
+        <div class="col text-end">
+            <a asp-action="Create" class="btn btn-primary">Create New Discussion</a>
+        </div>
+    </div>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-12 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <h5 class="card-title">
+                                    <a asp-action="Details" asp-route-id="@item.DiscussionId">@item.Title</a>
+                                </h5>
+                                <h6 class="card-subtitle mb-2 text-muted">
+                                    Posted by @item.Author on @item.CreateDate.ToString("MMM dd, yyyy")
+                                </h6>
+                            </div>
+                            <div class="btn-group">
+                                <a asp-action="Details" asp-route-id="@item.DiscussionId"
+                                   class="btn btn-sm btn-outline-primary">View</a>
+                                <a asp-action="Edit" asp-route-id="@item.DiscussionId"
+                                   class="btn btn-sm btn-outline-secondary">Edit</a>
+                                <form asp-action="Delete" asp-route-id="@item.DiscussionId"
+                                      method="post" style="display: inline;">
+                                    @Html.AntiForgeryToken()
+                                    <button type="submit" class="btn btn-sm btn-outline-danger"
+                                            onclick="return confirm('Are you sure you want to delete this discussion?')">
+                                        Delete
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        @if (!string.IsNullOrEmpty(item.Category))
+                        {
+                            <span class="badge bg-secondary">@item.Category</span>
+                        }
+                        <p class="card-text mt-2">
+                            @(item.Content.Length > 200 ? item.Content.Substring(0, 200) + "..." : item.Content)
+                        </p>
+                        <div class="text-muted">
+                            @item.Comments.Count comments
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

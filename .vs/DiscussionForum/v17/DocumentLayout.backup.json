@@ -1,0 +1,599 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\data\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:data\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\views\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:views\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\models\\accountviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:models\\accountviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\views\\discussions\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:views\\discussions\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\views\\discussions\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:views\\discussions\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\views\\discussions\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:views\\discussions\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\views\\discussions\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:views\\discussions\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\views\\discussions\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:views\\discussions\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\views\\comments\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:views\\comments\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\views\\comments\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:views\\comments\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\views\\comments\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:views\\comments\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\views\\comments\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:views\\comments\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\views\\comments\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:views\\comments\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\models\\discussion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:models\\discussion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\controllers\\discussionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:controllers\\discussionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\controllers\\commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:controllers\\commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\controllers\\commentsapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:controllers\\commentsapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\views\\home\\getdiscussion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:views\\home\\getdiscussion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\views\\home\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:views\\home\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|c:\\users\\harry\\downloads\\discussionforum-master\\discussionforum-master\\discussionforum\\migrations\\20250212165000_makeauthoroptional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F4DC306-9BDB-48D0-986B-5542B8669023}|DiscussionForum.csproj|solutionrelative:migrations\\20250212165000_makeauthoroptional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAkwEMAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T16:02:50.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAkwBwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T19:23:33.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationDbContextFactory.cs",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Data\\ApplicationDbContextFactory.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContextFactory.cs",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Data\\ApplicationDbContextFactory.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContextFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T19:23:46.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAIwDoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T19:22:33.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-07T19:30:51.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AccessDenied.cshtml",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Account\\AccessDenied.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\AccessDenied.cshtml",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Account\\AccessDenied.cshtml",
+              "RelativeToolTip": "Views\\Account\\AccessDenied.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-07T19:30:20.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAIwCQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-07T19:30:02.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-07T19:29:41.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AccountViewModels.cs",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Models\\AccountViewModels.cs",
+              "RelativeDocumentMoniker": "Models\\AccountViewModels.cs",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Models\\AccountViewModels.cs",
+              "RelativeToolTip": "Models\\AccountViewModels.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAIwCQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T19:28:59.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAA3wFsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T19:28:25.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Discussions\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Discussions\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Discussions\\Create.cshtml",
+              "RelativeToolTip": "Views\\Discussions\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T16:30:09.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Discussions\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Discussions\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Discussions\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Discussions\\Delete.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T17:20:09.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Discussions\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Discussions\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Discussions\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Discussions\\Edit.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T16:06:30.069Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Discussions\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Discussions\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Discussions\\Index.cshtml",
+              "RelativeToolTip": "Views\\Discussions\\Index.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T16:03:56.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-02-12T16:07:34.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Comments\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Comments\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Comments\\Index.cshtml",
+              "RelativeToolTip": "Views\\Comments\\Index.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T17:20:03.47Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Discussions\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Discussions\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Discussions\\Details.cshtml",
+              "RelativeToolTip": "Views\\Discussions\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T15:58:27.85Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "wwwroot\\js\\site.js",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAQwF8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-12T15:48:34.98Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Comments\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Comments\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Comments\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Comments\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T17:20:01.831Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Comments\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Comments\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Comments\\Details.cshtml",
+              "RelativeToolTip": "Views\\Comments\\Details.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAADQAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T17:19:31.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAkwEIAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T16:19:32.847Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Comments\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Comments\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Comments\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Comments\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T17:19:29.465Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Comments\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Comments\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Comments\\Create.cshtml",
+              "RelativeToolTip": "Views\\Comments\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T17:18:45.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T17:19:19.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Discussion.cs",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Models\\Discussion.cs",
+              "RelativeDocumentMoniker": "Models\\Discussion.cs",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Models\\Discussion.cs",
+              "RelativeToolTip": "Models\\Discussion.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAIwBYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T16:29:51.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Models\\Comment.cs",
+              "RelativeDocumentMoniker": "Models\\Comment.cs",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Models\\Comment.cs",
+              "RelativeToolTip": "Models\\Comment.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAYwAkAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T15:59:56.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "DiscussionsController.cs",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Controllers\\DiscussionsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DiscussionsController.cs",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Controllers\\DiscussionsController.cs",
+              "RelativeToolTip": "Controllers\\DiscussionsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T15:59:20.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CommentsController.cs",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Controllers\\CommentsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CommentsController.cs",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Controllers\\CommentsController.cs",
+              "RelativeToolTip": "Controllers\\CommentsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T15:48:19.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CommentsApiController.cs",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Controllers\\CommentsApiController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CommentsApiController.cs",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Controllers\\CommentsApiController.cs",
+              "RelativeToolTip": "Controllers\\CommentsApiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T15:48:00.71Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAIwC8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T16:19:49.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "GetDiscussion.cshtml",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Home\\GetDiscussion.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\GetDiscussion.cshtml",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Home\\GetDiscussion.cshtml",
+              "RelativeToolTip": "Views\\Home\\GetDiscussion.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T16:19:59.757Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Home\\Error.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Error.cshtml",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Home\\Error.cshtml",
+              "RelativeToolTip": "Views\\Home\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T17:20:19.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T16:54:04.196Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "20250212165000_MakeAuthorOptional.cs",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Migrations\\20250212165000_MakeAuthorOptional.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250212165000_MakeAuthorOptional.cs",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Migrations\\20250212165000_MakeAuthorOptional.cs",
+              "RelativeToolTip": "Migrations\\20250212165000_MakeAuthorOptional.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T16:50:01.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T16:06:43.795Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

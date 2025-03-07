@@ -1,0 +1,34 @@
+[
+  {
+    "ContainingType": "DiscussionForum.Controllers.CommentsApiController",
+    "Method": "Create",
+    "RelativePath": "api/CommentsApi/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "DiscussionForum.Controllers.CommentsApiController\u002BCommentCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiscussionForum.Controllers.CommentsApiController",
+    "Method": "GetDiscussionComments",
+    "RelativePath": "api/CommentsApi/GetDiscussionComments/{discussionId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "discussionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
