@@ -74,6 +74,7 @@ wwwroot\images\logo.jpg
 wwwroot\images\profiles\1b9412fe-8d6c-4488-9134-8d140d56ef6b_icons8-profile-32.png
 wwwroot\images\profiles\259ecfe2-3c49-47a6-a126-df597c5df894_icons8-profile-32.png
 wwwroot\images\profiles\81f19b6a-27cd-49f9-8f63-f57114db8b8c_icons8-profile-32.png
+wwwroot\images\profiles\9e0cc477-70e8-46b7-bd9e-378dafa6699d_icons8-profile-32.png
 wwwroot\images\profiles\d898d33b-7724-4304-b492-98059027d288_icons8-profile-32.png
 wwwroot\images\profiles\default-profile.png
 wwwroot\images\profiles\e8289700-acd9-4253-b41c-d6b8d71bf739_icons8-profile-32.png

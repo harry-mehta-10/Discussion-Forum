@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "User Profile";
+    var profileUser = (ApplicationUser)ViewData["ProfileUser"];
+    var discussions = (IEnumerable<Discussion>)ViewData["UserDiscussions"];
+}
+
+<div class="user-profile">
+    <div class="profile-header">
+        <div class="profile-image">
+            @if (!string.IsNullOrEmpty(profileUser.ImageFilename))
+            {
+                <img src="~/images/profiles/@profileUser.ImageFilename" alt="Profile" class="profile-image" />
+            }
+            else
+            {
+                <img src="~/images/profiles/default-profile.png" alt="Default Profile" class="profile-image" />
+            }
+        </div>
+
+        <div class="profile-info">
+            <h2>@profileUser.Name</h2>
+            @if (!string.IsNullOrEmpty(profileUser.Location))
+            {
+                <p>@profileUser.Location</p>
+            }
+        </div>
+    </div>
+
+    <div class="discussions-section">
+        <h3>Discussions</h3>
+        @if (discussions.Any())
+        {
+            <div class="user-discussions">
+                @foreach (var discussion in discussions)
+                {
+                    <div class="discussion-item">
+                        <h4>
+                            <a asp-controller="Home" asp-action="GetDiscussion" asp-route-id="@discussion.DiscussionId">
+                                @discussion.Title
+                            </a>
+                        </h4>
+                        <span>Posted on @discussion.CreateDate.ToString("MMM dd, yyyy")</span>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <p>This user hasn't created any discussions yet.</p>
+        }
+    </div>
+</div>

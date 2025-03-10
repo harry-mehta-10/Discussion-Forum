@@ -13,12 +13,37 @@
 
     <div class="card mb-4">
         <div class="card-body">
-            <h1 class="card-title">@Model.Title</h1>
-            <div class="mb-3">
-                <small class="text-muted">
-                    Posted by @(string.IsNullOrWhiteSpace(Model.Author) ? "Anonymous" : Model.Author)
-                    on @Model.CreateDate.ToString("MMM dd, yyyy HH:mm")
-                </small>
+            <div class="discussion-header">
+                <h1>@Model.Title</h1>
+
+                <div class="author-info">
+                    @if (Model.User != null)
+                    {
+                        <!-- Display profile picture -->
+                        <div class="author-picture">
+                            @if (!string.IsNullOrEmpty(Model.User.ImageFilename))
+                            {
+                                <img src="/images/profiles/@Model.User.ImageFilename" alt="@Model.User.Name's profile" class="profile-thumbnail" />
+                            }
+                            else
+                            {
+                                <img src="/images/profiles/default-profile.png" alt="Default profile" class="profile-thumbnail" />
+                            }
+                        </div>
+
+                        <!-- Display author name correctly -->
+                        <div class="author-name">
+                            <a asp-controller="Account" asp-action="Profile" asp-route-id="@Model.User.Id">
+                                @Model.User.Name
+                            </a>
+                        </div>
+                    }
+                    else
+                    {
+                        <span>@(Model.Author ?? "Anonymous")</span>
+                    }
+                    <span class="post-date">Posted on @Model.CreateDate.ToString("MMM dd, yyyy")</span>
+                </div>
             </div>
 
             @if (!string.IsNullOrEmpty(Model.ImageFileName))
@@ -31,34 +56,38 @@
             }
 
             <div class="discussion-content mb-4">
-                @Html.Raw(Model.Content)
+                @Html.Raw(Model.Content.Replace("\n", "<br />"))
             </div>
         </div>
     </div>
 
     <div class="card">
         <div class="card-body">
-            <h4>Comments</h4>
-            <div class="mb-4">
-                <form id="comment-form">
-                    @Html.AntiForgeryToken()
-                    <div class="mb-3">
-                        <label for="Author" class="form-label">Your Name (optional)</label>
-                        <input type="text" id="Author" class="form-control" placeholder="Leave empty to post as Anonymous" />
-                    </div>
-                    <div class="mb-3">
-                        <label for="Content" class="form-label">Your Comment*</label>
-                        <textarea id="Content" class="form-control" rows="3" required></textarea>
-                        <div class="invalid-feedback">
-                            Please enter a comment.
+            <div class="comments-section">
+                <h3>Comments (@Model.Comments.Count)</h3>
+
+                @foreach (var comment in Model.Comments)
+                {
+                    <div class="comment">
+                        <div class="comment-header">
+                            <!-- Display comment author name correctly -->
+                            @if (comment.User != null && !string.IsNullOrEmpty(comment.User.Name))
+                            {
+                                <a asp-controller="Account" asp-action="Profile" asp-route-id="@comment.ApplicationUserId" class="comment-author">
+                                    @comment.User.Name
+                                </a>
+                            }
+                            else
+                            {
+                                <span class="comment-author">@(comment.Author ?? "Anonymous")</span>
+                            }
+                            <span class="comment-date">@comment.CreateDate.ToString("MMM dd, yyyy HH:mm")</span>
+                        </div>
+                        <div class="comment-content">
+                            @Html.Raw(comment.Content.Replace("\n", "<br />"))
                         </div>
                     </div>
-                    <input type="hidden" id="DiscussionId" value="@Model.DiscussionId" />
-                    <button type="submit" class="btn btn-primary">Post Comment</button>
-                </form>
-            </div>
-            <div id="comments-container">
-                <!-- Comments will be loaded here -->
+                }
             </div>
         </div>
     </div>

@@ -34,12 +34,38 @@
                         </h5>
                         <p class="card-text">
                             <small class="text-muted">
-                                Posted by @discussion.Author on @discussion.CreateDate.ToString("MMM dd, yyyy HH:mm")
+                                Posted by
+                                @if (!string.IsNullOrEmpty(discussion.UserName))
+                                {
+                                    <a asp-controller="Account" asp-action="Profile" asp-route-id="@discussion.ApplicationUserId">
+                                        @discussion.UserName
+                                    </a>
+                                }
+                                else
+                                {
+                                    <span>@(discussion.Author ?? "Anonymous")</span>
+                                }
+                                on @discussion.CreateDate.ToString("MMM dd, yyyy HH:mm")
                             </small>
                         </p>
-                        <p class="card-text">
-                            <span class="badge bg-secondary">@discussion.CommentCount Comments</span>
-                        </p>
+
+                        <div class="discussion-meta">
+                            <span class="discussion-date">@discussion.CreateDate.ToString("MMM dd, yyyy")</span>
+                            <span class="discussion-author">
+                                by
+                                @if (!string.IsNullOrEmpty(discussion.ApplicationUserId))
+                                {
+                                    <a asp-controller="Account" asp-action="Profile" asp-route-id="@discussion.ApplicationUserId">
+                                        @(discussion.UserName ?? discussion.Author)
+                                    </a>
+                                }
+                                else
+                                {
+                                    <span>@(discussion.Author ?? "Anonymous")</span>
+                                }
+                            </span>
+                            <span>@discussion.CommentCount Comments</span>
+                        </div>
                     </div>
                 </div>
             </div>

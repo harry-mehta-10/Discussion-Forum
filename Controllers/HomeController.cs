@@ -2,22 +2,26 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using DiscussionForum.Data;
 using DiscussionForum.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace DiscussionForum.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public HomeController(ApplicationDbContext context)
+        public HomeController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         // Displays the list of discussions with relevant details like title, date, comment count, and author.
         public async Task<IActionResult> Index()
         {
             var discussions = await _context.Discussions
+                .Include(d => d.User)
                 .Select(d => new DiscussionViewModel
                 {
                     DiscussionId = d.DiscussionId,
@@ -26,7 +30,10 @@ namespace DiscussionForum.Controllers
                     ImageFileName = d.ImageFileName,
                     // Counts the number of comments associated with each discussion.
                     CommentCount = _context.Comments.Count(c => c.DiscussionId == d.DiscussionId),
-                    Author = d.Author ?? "Anonymous"  // Default to "Anonymous" if Author is null
+                    Author = d.Author ?? "Anonymous",  // Default to "Anonymous" if Author is null
+                    ApplicationUserId = d.ApplicationUserId,
+                    UserName = d.User != null ? d.User.Name : null,
+                    UserImageFilename = d.User != null ? d.User.ImageFilename : null
                 })
                 .OrderByDescending(d => d.CreateDate)
                 .ToListAsync();
@@ -40,58 +47,24 @@ namespace DiscussionForum.Controllers
             try
             {
                 var discussion = await _context.Discussions
-                    .Where(d => d.DiscussionId == id)
-                    .Select(d => new
-                    {
-                        d.DiscussionId,
-                        d.Title,
-                        d.Content,
-                        d.CreateDate,
-                        d.ImageFileName,
-                        Author = d.Author ?? "Anonymous",  // Default to "Anonymous" if Author is null
-                        d.Category,
-                        Comments = d.Comments.Select(c => new
-                        {
-                            c.CommentId,
-                            c.Content,
-                            c.CreateDate,
-                            Author = c.Author ?? "Anonymous"  // Default to "Anonymous" if Comment Author is null
-                        }).ToList()
-                    })
-                    .AsNoTracking()
-                    .FirstOrDefaultAsync();
+                    .Include(d => d.User)
+                    .Include(d => d.Comments)
+                        .ThenInclude(c => c.User)
+                    .FirstOrDefaultAsync(d => d.DiscussionId == id);
 
                 if (discussion == null)
                 {
                     return NotFound();
                 }
 
-                // Map the anonymous type to your Discussion model
-                var discussionModel = new Discussion
-                {
-                    DiscussionId = discussion.DiscussionId,
-                    Title = discussion.Title,
-                    Content = discussion.Content,
-                    CreateDate = discussion.CreateDate,
-                    ImageFileName = discussion.ImageFileName,
-                    Author = discussion.Author,
-                    Category = discussion.Category,
-                    Comments = discussion.Comments.Select(c => new Comment
-                    {
-                        CommentId = c.CommentId,
-                        Content = c.Content,
-                        CreateDate = c.CreateDate,
-                        Author = c.Author,
-                        DiscussionId = id
-                    }).ToList()
-                };
+                // Make sure comments are ordered
+                discussion.Comments = discussion.Comments.OrderBy(c => c.CreateDate).ToList();
 
-                return View(discussionModel);
+                return View(discussion);
             }
             catch (Exception ex)
             {
                 // Log the exception
-                // Consider using a logging framework here
                 return StatusCode(500, $"An error occurred: {ex.Message}");
             }
         }
@@ -113,5 +86,10 @@ namespace DiscussionForum.Controllers
         // Holds the count of comments for each discussion.
         public int CommentCount { get; set; }
         public string Author { get; set; } = string.Empty;  // Default to empty string
+
+        // User related information
+        public string? ApplicationUserId { get; set; }
+        public string? UserName { get; set; }
+        public string? UserImageFilename { get; set; }
     }
 }

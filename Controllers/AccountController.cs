@@ -5,6 +5,9 @@ using DiscussionForum.Models;
 using Microsoft.AspNetCore.Authorization;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
+using DiscussionForum.Data;
 
 namespace DiscussionForum.Controllers
 {
@@ -13,15 +16,18 @@ namespace DiscussionForum.Controllers
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly ApplicationDbContext _context;
 
         public AccountController(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
-            IWebHostEnvironment webHostEnvironment)
+            IWebHostEnvironment webHostEnvironment,
+            ApplicationDbContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _webHostEnvironment = webHostEnvironment;
+            _context = context;
         }
 
         [HttpGet]
@@ -82,7 +88,6 @@ namespace DiscussionForum.Controllers
             }
             catch (Exception ex)
             {
-                // Log the exception details
                 ModelState.AddModelError(string.Empty, "Registration failed: " + ex.Message);
             }
             return View(model);
@@ -166,7 +171,6 @@ namespace DiscussionForum.Controllers
             // Handle image upload
             if (model.ImageFile != null && model.ImageFile.Length > 0)
             {
-                // Delete the old image if it exists
                 if (!string.IsNullOrEmpty(user.ImageFilename))
                 {
                     string oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath, "images", "profiles", user.ImageFilename);
@@ -211,6 +215,33 @@ namespace DiscussionForum.Controllers
         public IActionResult AccessDenied()
         {
             return View();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Profile(string id)
+        {
+            if (string.IsNullOrEmpty(id))
+            {
+                return NotFound();
+            }
+
+            var user = await _userManager.FindByIdAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            // Get the user's discussions
+            var discussions = await _context.Discussions
+                .Where(d => d.ApplicationUserId == id)
+                .OrderByDescending(d => d.CreateDate)
+                .ToListAsync();
+
+            // Pass user and discussions directly to the view
+            ViewData["ProfileUser"] = user;
+            ViewData["UserDiscussions"] = discussions;
+
+            return View(); // Return the view without a specific model
         }
     }
 }
