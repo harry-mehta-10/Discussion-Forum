@@ -2,31 +2,44 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using DiscussionForum.Data;
 using DiscussionForum.Models;
+using System.Threading.Tasks;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
+using System.Linq;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DiscussionForum.Controllers
 {
+    [Authorize] // Add this attribute to restrict entire controller to authenticated users
     public class DiscussionsController : Controller
     {
         private readonly ApplicationDbContext _context;
         private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly UserManager<ApplicationUser> _userManager; // Add UserManager
 
-        public DiscussionsController(ApplicationDbContext context, IWebHostEnvironment webHostEnvironment)
+        public DiscussionsController(
+            ApplicationDbContext context,
+            IWebHostEnvironment webHostEnvironment,
+            UserManager<ApplicationUser> userManager)
         {
             _context = context;
             _webHostEnvironment = webHostEnvironment;
+            _userManager = userManager;
         }
 
-        // displays a list of all discussions, ordered by creation date, including their associated comments.
+        // GET: Discussions/Index - List all discussions
         public async Task<IActionResult> Index()
         {
             var discussions = await _context.Discussions
                 .Include(d => d.Comments)
+                .Include(d => d.User) // Include the User navigation property
                 .OrderByDescending(d => d.CreateDate)
                 .ToListAsync();
             return View(discussions);
         }
 
-        // displays detailed information for a specific discussion, including all comments.
+        // GET: Discussions/Details/5 - View a specific discussion
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -36,6 +49,7 @@ namespace DiscussionForum.Controllers
 
             var discussion = await _context.Discussions
                 .Include(d => d.Comments)
+                .Include(d => d.User) // Include User
                 .FirstOrDefaultAsync(m => m.DiscussionId == id);
 
             if (discussion == null)
@@ -43,28 +57,37 @@ namespace DiscussionForum.Controllers
                 return NotFound();
             }
 
+            // Order comments and include their Users
+            discussion.Comments = discussion.Comments
+                .OrderBy(c => c.CreateDate)
+                .ToList();
+
             return View(discussion);
         }
 
-        // displays the view to create a new discussion.
+        // GET: Discussions/Create - Display create form
         public IActionResult Create()
         {
             return View();
         }
 
+        // POST: Discussions/Create - Create a new discussion
         [HttpPost]
         [ValidateAntiForgeryToken]
-        // handles the creation of a new discussion, including handling image file upload.
-        public async Task<IActionResult> Create([Bind("Title,Content,Category,Author")] Discussion discussion, IFormFile? imageFile)
+        public async Task<IActionResult> Create([Bind("Title,Content,Category")] Discussion discussion, IFormFile? imageFile)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    discussion.CreateDate = DateTime.Now;
-                    discussion.Author = string.IsNullOrWhiteSpace(discussion.Author) ? "Anonymous" : discussion.Author;
+                    // Get current user
+                    var user = await _userManager.GetUserAsync(User);
 
-                    // if an image file is provided, validate and save it to the server.
+                    discussion.CreateDate = DateTime.Now;
+                    discussion.Author = user.Name; // Set the Author to the user's Name
+                    discussion.ApplicationUserId = user.Id; // Set the ApplicationUserId
+
+                    // Handle image upload
                     if (imageFile != null && imageFile.Length > 0)
                     {
                         string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images");
@@ -99,7 +122,7 @@ namespace DiscussionForum.Controllers
             return View(discussion);
         }
 
-        // displays the view to edit an existing discussion.
+        // GET: Discussions/Edit/5 - Display edit form
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -112,33 +135,49 @@ namespace DiscussionForum.Controllers
             {
                 return NotFound();
             }
+
+            // Check if current user is the owner
+            var currentUserId = _userManager.GetUserId(User);
+            if (discussion.ApplicationUserId != currentUserId)
+            {
+                return Forbid(); // Return 403 Forbidden if user is not the owner
+            }
+
             return View(discussion);
         }
 
+        // POST: Discussions/Edit/5 - Update a discussion
         [HttpPost]
         [ValidateAntiForgeryToken]
-        // handles updating an existing discussion's information.
-        public async Task<IActionResult> Edit(int id, [Bind("DiscussionId,Title,Content,Category,Author")] Discussion discussion)
+        public async Task<IActionResult> Edit(int id, [Bind("DiscussionId,Title,Content,Category")] Discussion discussion)
         {
             if (id != discussion.DiscussionId)
             {
                 return NotFound();
             }
 
+            // Get the existing discussion to check ownership
+            var existingDiscussion = await _context.Discussions.FindAsync(id);
+            if (existingDiscussion == null)
+            {
+                return NotFound();
+            }
+
+            // Check if current user is the owner
+            var currentUserId = _userManager.GetUserId(User);
+            if (existingDiscussion.ApplicationUserId != currentUserId)
+            {
+                return Forbid(); // Return 403 Forbidden if user is not the owner
+            }
+
             if (ModelState.IsValid)
             {
                 try
                 {
-                    var existingDiscussion = await _context.Discussions.FindAsync(id);
-                    if (existingDiscussion == null)
-                    {
-                        return NotFound();
-                    }
-
+                    // Update only allowed fields
                     existingDiscussion.Title = discussion.Title;
                     existingDiscussion.Content = discussion.Content;
                     existingDiscussion.Category = discussion.Category;
-                    existingDiscussion.Author = discussion.Author;
 
                     await _context.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
@@ -158,9 +197,35 @@ namespace DiscussionForum.Controllers
             return View(discussion);
         }
 
+        // GET: Discussions/Delete/5 - Display delete confirmation page
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var discussion = await _context.Discussions
+                .FirstOrDefaultAsync(m => m.DiscussionId == id);
+
+            if (discussion == null)
+            {
+                return NotFound();
+            }
+
+            // Check if current user is the owner
+            var currentUserId = _userManager.GetUserId(User);
+            if (discussion.ApplicationUserId != currentUserId)
+            {
+                return Forbid(); // Return 403 Forbidden if user is not the owner
+            }
+
+            return View(discussion);
+        }
+
+        // POST: Discussions/Delete/5 - Delete a discussion
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        // handles the deletion of a discussion along with its associated comments.
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var discussion = await _context.Discussions
@@ -172,17 +237,51 @@ namespace DiscussionForum.Controllers
                 return NotFound();
             }
 
-            // removes all associated comments before deleting the discussion.
+            // Check if current user is the owner
+            var currentUserId = _userManager.GetUserId(User);
+            if (discussion.ApplicationUserId != currentUserId)
+            {
+                return Forbid(); // Return 403 Forbidden if user is not the owner
+            }
+
+            // Remove associated comments and the discussion
             _context.Comments.RemoveRange(discussion.Comments);
             _context.Discussions.Remove(discussion);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        // checks if a discussion exists in the database.
+        // Check if a discussion exists
         private bool DiscussionExists(int id)
         {
             return _context.Discussions.Any(e => e.DiscussionId == id);
+        }
+
+        // POST: Discussions/CreateComment - Create a new comment
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateComment(int id, string content)
+        {
+            if (ModelState.IsValid)
+            {
+                // Get current user
+                var user = await _userManager.GetUserAsync(User);
+
+                var comment = new Comment
+                {
+                    Content = content,
+                    DiscussionId = id,
+                    Author = user.Name, // Set Author to user's name
+                    ApplicationUserId = user.Id, // Set ApplicationUserId
+                    CreateDate = DateTime.Now
+                };
+
+                _context.Comments.Add(comment);
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Details", new { id });
+            }
+
+            return RedirectToAction("Details", new { id });
         }
     }
 }

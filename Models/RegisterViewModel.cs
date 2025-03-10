@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Http;
 
 namespace DiscussionForum.Models
 {
@@ -33,5 +34,35 @@ namespace DiscussionForum.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [Display(Name = "Name")]
+        public string Name { get; set; }
+
+        [Display(Name = "Location")]
+        public string Location { get; set; }
+
+        [Display(Name = "Profile Picture (Optional)")]
+        public IFormFile ImageFile { get; set; }
+    }
+
+    public class ManageProfileViewModel
+    {
+        [Required]
+        [Display(Name = "Name")]
+        public string Name { get; set; }
+
+        [Display(Name = "Location")]
+        public string Location { get; set; }
+
+        [Display(Name = "Current Profile Picture")]
+        public string CurrentImageFilename { get; set; }
+
+        [Display(Name = "Upload New Profile Picture")]
+        public IFormFile ImageFile { get; set; }
+
+        [EmailAddress]
+        [Display(Name = "Email")]
+        public string Email { get; set; }
     }
 }

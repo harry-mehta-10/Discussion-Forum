@@ -1,0 +1,53 @@
+﻿@model DiscussionForum.Models.ManageProfileViewModel
+
+@{
+    ViewData["Title"] = "Manage Profile";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-8">
+        <form asp-action="Manage" method="post" enctype="multipart/form-data">
+            <h2>Update your profile information.</h2>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="Name" class="form-control" aria-required="true" />
+                <label asp-for="Name"></label>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="Email" class="form-control" readonly />
+                <label asp-for="Email"></label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="Location" class="form-control" />
+                <label asp-for="Location"></label>
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Current Profile Picture</label>
+                <div>
+                    <partial name="_ProfileImage" model="@Model.CurrentImageFilename" />
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="ImageFile" class="form-label"></label>
+                <input asp-for="ImageFile" type="file" class="form-control" accept="image/*" />
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-lg btn-primary">Save Changes</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

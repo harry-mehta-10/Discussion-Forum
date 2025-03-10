@@ -1,0 +1,44 @@
+﻿@model DiscussionForum.Models.Discussion
+
+<div class="container mt-4">
+    <h1>@Model.Title</h1>
+    <p>@Model.Content</p>
+    <p><strong>Posted by:</strong> @Model.Author on @Model.CreateDate.ToString("MMM dd, yyyy")</p>
+
+    @if (!string.IsNullOrEmpty(Model.ImageFileName))
+    {
+        <img src="~/images/@Model.ImageFileName" alt="Discussion Image" class="img-fluid" />
+    }
+
+    <h3>Comments</h3>
+    @if (Model.Comments.Any())
+    {
+        foreach (var comment in Model.Comments.OrderBy(c => c.CreateDate)) // Display comments from oldest to newest
+        {
+            <div class="card mb-2">
+                <div class="card-body">
+                    <p><strong>@comment.Author</strong> on @comment.CreateDate.ToString("MMM dd, yyyy")</p>
+                    <p>@comment.Content</p>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <p>No comments yet.</p>
+    }
+
+    <h4>Add a Comment</h4>
+    <form asp-action="CreateComment" asp-route-id="@Model.DiscussionId" method="post">
+        <div class="mb-3">
+            <label for="Content" class="form-label">Comment*</label>
+            <textarea name="Content" class="form-control" required></textarea>
+            <span asp-validation-for="Content" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <input type="submit" value="Post Comment" class="btn btn-primary" />
+        </div>
+    </form>
+
+    <a asp-action="Index" class="btn btn-secondary">Back to Discussions</a>
+</div>

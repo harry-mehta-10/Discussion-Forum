@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZqBJUfMnAMg=",
+  "dgSpecHash": "NmjJHAej8e4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\DiscussionForum.csproj",
+  "projectFilePath": "C:\\Users\\Harry\\Desktop\\Assignment-2_login\\Discussion-Forum\\DiscussionForum.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Harry\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Harry\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

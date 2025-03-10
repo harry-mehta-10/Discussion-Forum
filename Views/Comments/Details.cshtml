@@ -29,13 +29,21 @@
     <button type="submit" class="btn btn-primary">Post Comment</button>
 </form>
 
-<a href="@Url.Action("Index", "Discussions")">Back to Discussion List</a>
+@if (User.Identity.IsAuthenticated && Model.ApplicationUserId == UserManager.GetUserId(User))
+{
+    <div class="mt-3">
+        <a asp-action="Edit" asp-route-id="@Model.DiscussionId" class="btn btn-primary">Edit Discussion</a>
+        <a asp-action="Delete" asp-route-id="@Model.DiscussionId" class="btn btn-danger">Delete Discussion</a>
+    </div>
+}
+
+<a href="@Url.Action("Index", "Discussions")" class="btn btn-secondary">Back to Discussion List</a>
 
 @section Scripts {
     <script>
         const discussionId = @Model.DiscussionId;
 
-        // fetches comments via an API call and dynamically updates the comment section.
+        // Fetch comments via an API call and dynamically update the comment section.
         fetch(`/Comments/GetComments?discussionId=${discussionId}`)
             .then(response => response.json())
             .then(data => {
@@ -44,11 +52,11 @@
                 } else {
                     console.log("Comments:", data);
 
-                    // clears existing comments in case the comments were reloaded dynamically
+                    // Clears existing comments in case the comments were reloaded dynamically
                     const commentsContainer = document.getElementById('comments-container');
                     commentsContainer.innerHTML = '';
 
-                    // loops through the comments data and creates HTML elements for each comment
+                    // Loops through the comments data and creates HTML elements for each comment
                     data.forEach(comment => {
                         const commentDiv = document.createElement('div');
                         commentDiv.classList.add('comment');

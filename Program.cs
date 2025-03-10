@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using DiscussionForum.Data;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using DiscussionForum.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,8 +10,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Add Identity services
-builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => {
+// Add Identity services with ApplicationUser
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options => {
     options.SignIn.RequireConfirmedAccount = false;
     options.Password.RequireDigit = true;
     options.Password.RequireLowercase = true;
@@ -19,8 +19,8 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => {
     options.Password.RequireNonAlphanumeric = true;
     options.Password.RequiredLength = 8;
 })
-    .AddEntityFrameworkStores<ApplicationDbContext>()
-    .AddDefaultTokenProviders();
+.AddEntityFrameworkStores<ApplicationDbContext>()
+.AddDefaultTokenProviders();
 
 // Configure cookie settings
 builder.Services.ConfigureApplicationCookie(options =>
@@ -48,7 +48,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthentication(); 
+// Add authentication middleware
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

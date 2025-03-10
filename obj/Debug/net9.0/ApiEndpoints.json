@@ -17,6 +17,22 @@
   },
   {
     "ContainingType": "DiscussionForum.Controllers.CommentsApiController",
+    "Method": "Delete",
+    "RelativePath": "api/CommentsApi/Delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiscussionForum.Controllers.CommentsApiController",
     "Method": "GetDiscussionComments",
     "RelativePath": "api/CommentsApi/GetDiscussionComments/{discussionId}",
     "HttpMethod": "GET",

@@ -2,21 +2,28 @@
 using Microsoft.EntityFrameworkCore;
 using DiscussionForum.Data;
 using DiscussionForum.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DiscussionForum.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize] // Add this attribute to restrict API access to authenticated users
     public class CommentsApiController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<ApplicationUser> _userManager; // Add UserManager
 
-        public CommentsApiController(ApplicationDbContext context)
+        public CommentsApiController(
+            ApplicationDbContext context,
+            UserManager<ApplicationUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
-        // fetches all comments for a specific discussion and orders them by creation date.
+        // GET: api/CommentsApi/GetDiscussionComments/5
         [HttpGet("GetDiscussionComments/{discussionId}")]
         public async Task<IActionResult> GetDiscussionComments(int discussionId)
         {
@@ -27,10 +34,11 @@ namespace DiscussionForum.Controllers
                     c.CommentId,
                     c.Content,
                     c.Author,
-                    CreateDate = c.CreateDate.ToString("MMM dd, yyyy HH:mm")
+                    c.ApplicationUserId, // Include user ID
+                    CreateDate = c.CreateDate.ToString("MMM dd, yyyy HH:mm"),
+                    IsOwner = c.ApplicationUserId == _userManager.GetUserId(User) // Add property to check if current user is owner
                 })
                 .ToListAsync();
-
             return Ok(comments);
         }
 
@@ -38,10 +46,9 @@ namespace DiscussionForum.Controllers
         {
             public string Content { get; set; } = string.Empty;
             public int DiscussionId { get; set; }
-            public string? Author { get; set; }
         }
 
-        // creates a new comment for a specific discussion.
+        // POST: api/CommentsApi/Create
         [HttpPost("Create")]
         public async Task<IActionResult> Create([FromBody] CommentCreateDto dto)
         {
@@ -52,12 +59,20 @@ namespace DiscussionForum.Controllers
 
             try
             {
+                // Get current user
+                var user = await _userManager.GetUserAsync(User);
+                if (user == null)
+                {
+                    return Unauthorized();
+                }
+
                 var comment = new Comment
                 {
                     Content = dto.Content,
                     DiscussionId = dto.DiscussionId,
                     CreateDate = DateTime.Now,
-                    Author = string.IsNullOrWhiteSpace(dto.Author) ? "Anonymous" : dto.Author
+                    Author = user.Name, // Set Author to user's name
+                    ApplicationUserId = user.Id // Set ApplicationUserId
                 };
 
                 _context.Comments.Add(comment);
@@ -67,7 +82,9 @@ namespace DiscussionForum.Controllers
                 {
                     success = true,
                     commentId = comment.CommentId,
-                    message = "Comment created successfully"
+                    message = "Comment created successfully",
+                    author = user.Name,
+                    createDate = comment.CreateDate.ToString("MMM dd, yyyy HH:mm")
                 });
             }
             catch (Exception ex)
@@ -79,6 +96,29 @@ namespace DiscussionForum.Controllers
                     error = ex.Message
                 });
             }
+        }
+
+        // DELETE: api/CommentsApi/Delete/5
+        [HttpDelete("Delete/{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var comment = await _context.Comments.FindAsync(id);
+            if (comment == null)
+            {
+                return NotFound();
+            }
+
+            // Check if current user is the owner
+            var currentUserId = _userManager.GetUserId(User);
+            if (comment.ApplicationUserId != currentUserId)
+            {
+                return Forbid(); // Return 403 Forbidden if user is not the owner
+            }
+
+            _context.Comments.Remove(comment);
+            await _context.SaveChangesAsync();
+
+            return Ok(new { success = true, message = "Comment deleted successfully" });
         }
     }
 }

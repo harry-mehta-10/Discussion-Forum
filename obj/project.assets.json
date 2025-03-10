@@ -8295,11 +8295,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\DiscussionForum.csproj",
+      "projectUniqueName": "C:\\Users\\Harry\\Desktop\\Assignment-2_login\\Discussion-Forum\\DiscussionForum.csproj",
       "projectName": "DiscussionForum",
-      "projectPath": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\DiscussionForum.csproj",
+      "projectPath": "C:\\Users\\Harry\\Desktop\\Assignment-2_login\\Discussion-Forum\\DiscussionForum.csproj",
       "packagesPath": "C:\\Users\\Harry\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Harry\\Downloads\\DiscussionForum-master\\DiscussionForum-master\\DiscussionForum\\obj\\",
+      "outputPath": "C:\\Users\\Harry\\Desktop\\Assignment-2_login\\Discussion-Forum\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

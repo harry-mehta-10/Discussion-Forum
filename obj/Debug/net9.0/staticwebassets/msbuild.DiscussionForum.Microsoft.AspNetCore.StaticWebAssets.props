@@ -216,6 +216,114 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\logo.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\1b9412fe-8d6c-4488-9134-8d140d56ef6b_icons8-profile-32.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>DiscussionForum</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DiscussionForum</BasePath>
+      <RelativePath>images/profiles/1b9412fe-8d6c-4488-9134-8d140d56ef6b_icons8-profile-32.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>du8k7phdcb</Fingerprint>
+      <Integrity>O9uSCcmUcCe089DM9v7QPqkCKH6lN5OdesupEmpUDPo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\1b9412fe-8d6c-4488-9134-8d140d56ef6b_icons8-profile-32.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\259ecfe2-3c49-47a6-a126-df597c5df894_icons8-profile-32.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>DiscussionForum</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DiscussionForum</BasePath>
+      <RelativePath>images/profiles/259ecfe2-3c49-47a6-a126-df597c5df894_icons8-profile-32.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>du8k7phdcb</Fingerprint>
+      <Integrity>O9uSCcmUcCe089DM9v7QPqkCKH6lN5OdesupEmpUDPo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\259ecfe2-3c49-47a6-a126-df597c5df894_icons8-profile-32.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\81f19b6a-27cd-49f9-8f63-f57114db8b8c_icons8-profile-32.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>DiscussionForum</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DiscussionForum</BasePath>
+      <RelativePath>images/profiles/81f19b6a-27cd-49f9-8f63-f57114db8b8c_icons8-profile-32.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>du8k7phdcb</Fingerprint>
+      <Integrity>O9uSCcmUcCe089DM9v7QPqkCKH6lN5OdesupEmpUDPo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\81f19b6a-27cd-49f9-8f63-f57114db8b8c_icons8-profile-32.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\d898d33b-7724-4304-b492-98059027d288_icons8-profile-32.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>DiscussionForum</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DiscussionForum</BasePath>
+      <RelativePath>images/profiles/d898d33b-7724-4304-b492-98059027d288_icons8-profile-32.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>du8k7phdcb</Fingerprint>
+      <Integrity>O9uSCcmUcCe089DM9v7QPqkCKH6lN5OdesupEmpUDPo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\d898d33b-7724-4304-b492-98059027d288_icons8-profile-32.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\default-profile.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>DiscussionForum</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DiscussionForum</BasePath>
+      <RelativePath>images/profiles/default-profile.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>du8k7phdcb</Fingerprint>
+      <Integrity>O9uSCcmUcCe089DM9v7QPqkCKH6lN5OdesupEmpUDPo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\default-profile.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\e8289700-acd9-4253-b41c-d6b8d71bf739_icons8-profile-32.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>DiscussionForum</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DiscussionForum</BasePath>
+      <RelativePath>images/profiles/e8289700-acd9-4253-b41c-d6b8d71bf739_icons8-profile-32.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>du8k7phdcb</Fingerprint>
+      <Integrity>O9uSCcmUcCe089DM9v7QPqkCKH6lN5OdesupEmpUDPo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\e8289700-acd9-4253-b41c-d6b8d71bf739_icons8-profile-32.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))">
       <SourceType>Package</SourceType>
       <SourceId>DiscussionForum</SourceId>

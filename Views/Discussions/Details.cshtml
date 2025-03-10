@@ -1,64 +1,47 @@
 @model DiscussionForum.Models.Discussion
 
 <div class="container mt-4">
-    <div class="row">
-        <div class="col-md-12">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a asp-action="Index">Discussions</a></li>
-                    <li class="breadcrumb-item active">@Model.Title</li>
-                </ol>
-            </nav>
-
-            <h2>@Model.Title</h2>
-            <div class="mb-3">
-                <small class="text-muted">
-                    Posted by @Model.Author on @Model.CreateDate.ToString("MMM dd, yyyy")
-                </small>
-                @if (!string.IsNullOrEmpty(Model.Category))
-                {
-                    <span class="badge bg-secondary ms-2">@Model.Category</span>
-                }
-            </div>
-
-            @if (!string.IsNullOrEmpty(Model.ImageFileName))
-            {
-                <div class="mb-3">
-                    <img src="~/images/@Model.ImageFileName" class="img-fluid" alt="Discussion Image" />
-                </div>
-            }
-
-            <div class="mb-4">
-                @Html.Raw(Model.Content)
-            </div>
-
-            <hr />
-
-            <h4>Comments</h4>
-            <div class="mb-4">
-                <form id="comment-form">
-                    <div class="form-group mb-3">
-                        <label for="Content" class="control-label">Your Comment</label>
-                        <textarea id="Content" class="form-control" rows="3" required></textarea>
-                        <div class="invalid-feedback">
-                            Please enter a comment.
-                        </div>
-                    </div>
-
-                    <input type="hidden" id="DiscussionId" value="@Model.DiscussionId" />
-
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Post Comment</button>
-                    </div>
-                </form>
-            </div>
-
-            <div id="comments-container" class="mt-4">
-            </div>
-        </div>
+    <h2>@Model.Title</h2>
+    <div class="mb-3">
+        <small class="text-muted">
+            Posted by @Model.Author on @Model.CreateDate.ToString("MMM dd, yyyy")
+        </small>
     </div>
-</div>
 
-@section Scripts {
-    <script src="~/js/site.js" asp-append-version="true"></script>
-}
+    @if (User.Identity.IsAuthenticated && Model.ApplicationUserId == UserManager.GetUserId(User))
+    {
+        <a asp-action="Edit" asp-route-id="@Model.DiscussionId" class="btn btn-primary">Edit</a>
+        <a asp-action="Delete" asp-route-id="@Model.DiscussionId" class="btn btn-danger">Delete</a>
+    }
+
+    @if (Model.Comments.Any())
+    {
+        foreach (var comment in Model.Comments.OrderBy(c => c.CreateDate)) // Display comments from oldest to newest
+        {
+            <div class="card mb-2">
+                <div class="card-body">
+                    <p><strong>@comment.Author</strong> on @comment.CreateDate.ToString("MMM dd, yyyy")</p>
+                    <p>@comment.Content</p>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <p>No comments yet.</p>
+    }
+
+    <h4>Add a Comment</h4>
+    <form asp-action="CreateComment" asp-route-id="@Model.DiscussionId" method="post">
+        <div class="mb-3">
+            <label for="Content" class="form-label">Comment*</label>
+            <textarea name="Content" class="form-control" required></textarea>
+            <span asp-validation-for="Content" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <input type="submit" value="Post Comment" class="btn btn-primary" />
+        </div>
+    </form>
+
+    <a asp-action="Index" class="btn btn-secondary">Back to Discussions</a>
+</div>

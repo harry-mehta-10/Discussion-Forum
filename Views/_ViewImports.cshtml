@@ -1,3 +1,6 @@
 ﻿@using DiscussionForum
 @using DiscussionForum.Models
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<ApplicationUser> UserManager
+@inject SignInManager<ApplicationUser> SignInManager
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers

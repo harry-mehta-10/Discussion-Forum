@@ -1,0 +1,9 @@
+﻿@model string
+
+@{
+    string imagePath = string.IsNullOrEmpty(Model)
+        ? "/images/profiles/default-profile.png"
+        : $"/images/profiles/{Model}";
+}
+
+<img src="@imagePath" alt="Profile Picture" class="profile-image" />

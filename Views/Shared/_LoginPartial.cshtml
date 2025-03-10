@@ -1,6 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
+@inject SignInManager<DiscussionForum.Models.ApplicationUser> SignInManager
+@inject UserManager<DiscussionForum.Models.ApplicationUser> UserManager
 
 <ul class="navbar-nav">
     @if (SignInManager.IsSignedIn(User))
@@ -9,7 +9,16 @@
             <a class="nav-link" asp-area="" asp-controller="Discussions" asp-action="Index">My Threads</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="manage" asp-area="" asp-controller="Account" asp-action="Manage" title="Manage">Hello @UserManager.GetUserName(User)!</a>
+            <a class="nav-link" id="manage" asp-area="" asp-controller="Account" asp-action="Manage" title="Manage">
+                @{
+                    var user = await UserManager.GetUserAsync(User);
+                    if (user != null)
+                    {
+                        <span>Hello @user.Name!</span>
+                        <partial name="_ProfileImage" model="@user.ImageFilename" />
+                    }
+                }
+            </a>
         </li>
         <li class="nav-item">
             <form id="logoutForm" class="form-inline" asp-area="" asp-controller="Account" asp-action="Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
